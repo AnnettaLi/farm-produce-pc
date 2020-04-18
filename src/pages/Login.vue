@@ -1,12 +1,13 @@
 <template>
   <div class="login">
     <div class="title">
-      <h2>云边小卖铺</h2>
-      <h3>顾客端</h3>
+      <h2>山野人家农产品店</h2>
+      <!-- <h3>顾客端</h3> -->
     </div>
     <div class="container">
       <van-cell-group>
         <van-field
+          class="input"
           v-model="user.username"
           required
           clearable
@@ -15,6 +16,7 @@
         />
 
         <van-field
+          class="input"
           v-model="user.password"
           type="password"
           label="密码"
@@ -27,10 +29,10 @@
     <div class="footer">
       <van-row>
       <van-col span="17" class="regist">
-        <van-button size="small" type="info">注册</van-button>
+        <!-- <van-button size="small" type="info">注册</van-button> -->
       </van-col>
       <van-col span="5">
-        <van-button size="small" type="danger" @click="loginHandler">登录</van-button>
+        <van-button size="small" type="danger" @click="loginHandler" style="background-color:#fff;color:#333;border:none">登录</van-button>
       </van-col>
     </van-row>
     </div>
@@ -61,19 +63,31 @@ export default {
 }
 </script>
 <style scoped>
+  .login{
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/images/home.jpg");
+    background-size:cover;
+  }
   .title {
-    color:#ee0a24;
+    color:#fff;
     text-align: center;
-    margin-top: 150px;
+    padding-top: 200px;
   }
   .container {
     margin: 0 30px;
+    color: #107515;
   }
+  
   .footer {
     margin: 0 30px;
   }
   .regist {
     text-align: right;
     margin-right: 20px;
+  }
+  .input{
+    width: 300px;
+    background-color: none;
   }
 </style>

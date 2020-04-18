@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <van-nav-bar
-      title="云边小卖铺"
+      title="山野人家农产品店"
     />
     <van-row>
-      <img style="width:100%" src="../../assets/images/timg.jpg" alt="">
+      <img style="width:100%" src="../../assets/images/product.jpg" alt="">
     </van-row>
     <van-row>
       <van-grid :column-num="3">
