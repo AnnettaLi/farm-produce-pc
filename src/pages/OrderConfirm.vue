@@ -30,7 +30,7 @@
           </van-row>
           <van-divider />
           <van-row type="flex" justify="end" style="padding-top:5px;">
-            <van-col span="10" style="color:darkgray;">总金额:￥{{total}}</van-col>
+            <van-col span="10" style="color:darkgray;" maxlength="5">总金额:￥{{total}}</van-col>
           </van-row>
         </van-col>
       </van-row>

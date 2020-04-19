@@ -8,13 +8,19 @@
     </van-row>
     <van-row>
       <van-grid :column-num="3">
+        <!-- <van-grid-item
+          @click="findProduct(c,index)"
+          v-for="(c, index) in imageList"
+          :key="c.id"
+          :text="c.icon"
+        /> -->
         <van-grid-item
           @click="findProduct(c,index)"
           v-for="(c, index) in categories"
           :key="c.id"
-          :icon="c.icon"
           :text="c.name"
-        />
+        >
+        </van-grid-item>
       </van-grid>
     </van-row>
   </div>
@@ -22,6 +28,28 @@
 <script>
 import {mapState,mapActions} from 'vuex'
 export default {
+  data() {
+    return {
+      imageList:[
+        {
+          id:1,
+          icon:"../../assets/images/home.jpg"
+        },
+        {
+          id:2,
+          icon:"2"
+        },
+        {
+          id:3,
+          icon:"3"
+        },
+        {
+          id:4,
+          icon:"4"
+        }
+      ]
+    }
+  },
   created(){
     this.findAllCategories();
   },
